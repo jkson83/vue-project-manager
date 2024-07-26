@@ -9,10 +9,11 @@
         <li>조회</li>
       </ul>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>{{ index }}</li>
+        <li>{{ btitle }}</li>
+        <li>{{ IDname }}</li>
+        <li>{{ date }}</li>
+        <li>{{ viewnum }}</li>
       </ul>
     </div>
 
@@ -29,6 +30,13 @@ export default {
     return {
       title: 'Study',
       name: 'WriteForm',
+      props: {
+        index: {},
+        btitle: {},
+        IDname: {},
+        date: {},
+        viewnum: {}
+      },
       components: {
         WriteForm
       }
