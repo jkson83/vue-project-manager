@@ -16,31 +16,12 @@
         <li>{{ viewnum }}</li>
       </ul>
     </div>
-
-    <write-form></write-form>
 </template>
 
 <script>
-import WriteForm from './WriteForm.vue'
-
 export default {
-  components: { WriteForm },
-
   data () {
-    return {
-      title: 'Study',
-      name: 'WriteForm',
-      props: {
-        index: {},
-        btitle: {},
-        IDname: {},
-        date: {},
-        viewnum: {}
-      },
-      components: {
-        WriteForm
-      }
-    }
+    return { }
   }
 }
 </script>

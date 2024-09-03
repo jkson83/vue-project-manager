@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ListView from '../views/ListView.vue'
+import Nested from '../views/NestedComponent.vue'
+import ComponentEx from '../views/ParentComponent2.vue'
 
 const routes = [
   {
@@ -20,6 +22,16 @@ const routes = [
     path: '/list',
     name: 'list',
     component: ListView
+  },
+  {
+    path: '/Nested',
+    name: 'Nested',
+    component: Nested
+  },
+  {
+    path: '/ComponentEx',
+    name: 'ComponentEx',
+    component: ComponentEx
   }
 ]
 

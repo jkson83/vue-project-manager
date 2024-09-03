@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#app {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    nav {
+        float: left;
+        height: auto;
+        border-right: 1px solid #35495e;
+        box-sizing: border-box;
+        a {
+            display: block;
+            width: 100%;
+            font-weight: 700;
+            font-size: 20px;
+            margin: 0 30px;
+            text-decoration: none;
+            color: #35495e;
+            &:hover {
+                color: #41b883;
+            }
+        }
+        a:before {
+            content: "◆";
+            font-size: 8px;
+            margin: 8px 3px 0 0;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+    .article {
+        float: right;
+        height: auto;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
