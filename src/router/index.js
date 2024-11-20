@@ -1,43 +1,46 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ListView from '../views/ListView.vue'
-import Nested from '../views/NestedComponent.vue'
-import ComponentEx from '../views/ParentComponent2.vue'
+import { createRouter, createWebHashHistory } from 'vue-router';
+import GUIDE from './guide/guide.js';
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  },
-  {
-    path: '/list',
-    name: 'list',
-    component: ListView
-  },
-  {
-    path: '/Nested',
-    name: 'Nested',
-    component: Nested
-  },
-  {
-    path: '/ComponentEx',
-    name: 'ComponentEx',
-    component: ComponentEx
-  }
-]
+    {
+        path: '/',
+        redirect: '/guide/modal'
+    },
+    {
+        path: '/',
+        component: () => import('@/components/layout/LayoutBasic.vue'),
+        children: [
+            {
+                path: '/home',
+                name: 'home',
+                component: () => import('@/views/main/MainPage.vue')
+            }
+        ]
+    },
+    {
+        path: '/error',
+        name: 'error',
+        component: () => import('@/views/ErrorPage.vue')
+    },
+    {
+        path: '/notFound',
+        name: 'notFound',
+        component: () => import('@/views/NotFound.vue')
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        redirect: '/notFound'
+    },
+    ...GUIDE
+];
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
-})
+    mode: 'history',
+    history: createWebHashHistory(import.meta.env.BASE_URL),
+    routes,
+    scrollBehavior() {
+        return { top: 0 };
+    }
+});
 
-export default router
+export default router;

@@ -1,0 +1,263 @@
+@media screen and (max-width: 1024px) {
+    * {
+        outline-color: #212121;
+    }
+
+    /***** button *****/
+    button[class*='btn-'] {
+        font-size: toRem(14);
+        padding: 0 toRem(10);
+    }
+
+    /***** accordion *****/
+    .accordion {
+        &:first-of-type {
+            border-radius: toRem(12);
+        }
+
+        &:last-of-type {
+            border-bottom-left-radius: toRem(12);
+            border-bottom-right-radius: toRem(12);
+        }
+
+        &:has(+ .accordion) {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .acco-header {
+            .acco-trigger {
+                padding: toRem(16) toRem(24);
+            }
+
+            &.show + .acco-panel {
+                padding: toRem(16) toRem(24) toRem(32);
+            }
+        }
+    }
+
+    /***** tabs *****/
+    .tabs-wrap {
+        margin-left: toRem(-24);
+        margin-right: toRem(-24);
+
+        .tab-list {
+            padding: 0 toRem(8);
+            overflow-y: auto;
+        }
+    }
+
+    /***** calendar *****/
+    .calendar {
+        min-width: auto;
+        border: 0;
+        margin-left: toRem(-24);
+        margin-right: toRem(-24);
+
+        .calendar-wrap {
+            min-width: auto;
+        }
+
+        .calendar-dates {
+            .date-item {
+                padding: toRem(4);
+            }
+        }
+    }
+
+    /***** tooltip *****/
+    .tooltip-wrap {
+        right: toRem(24);
+        max-width: calc(100% - toRem(24));
+    }
+
+    /***** form *****/
+    .form-wrap {
+        &.datepicker {
+            display: block;
+        }
+
+        .form-item + .form-item {
+            margin-top: toRem(24);
+        }
+
+        .dialog-calendar {
+            position: fixed;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.6);
+
+            .calendar {
+                position: relative;
+                width: 100%;
+                padding: toRem(64) toRem(24) toRem(40);
+                border-top-left-radius: toRem(18);
+                border-top-right-radius: toRem(18);
+                margin: 0;
+                transform: translateY(100%);
+                animation-name: calendar-bottom;
+                animation-duration: 0.2s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+
+                .cal-close {
+                    position: absolute;
+                    top: toRem(8);
+                    right: toRem(8);
+                    width: toRem(40);
+                    height: toRem(40);
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        top: calc(50% - toRem(1));
+                        left: calc(50% - toRem(12));
+                        width: toRem(24);
+                        height: toRem(2);
+                        background: #212121;
+                        transform: rotateZ(45deg);
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        top: calc(50% - toRem(12));
+                        left: calc(50% - toRem(1));
+                        width: toRem(2);
+                        height: toRem(24);
+                        background: #212121;
+                        transform: rotateZ(45deg);
+                    }
+                }
+
+                .calendar-header {
+                    .calendar-tit {
+                        font-size: toRem(20);
+                    }
+
+                    button[class*='-cal'] {
+                        width: toRem(30);
+                        height: toRem(30);
+                    }
+                }
+
+                .calendar-dates .date-item > span {
+                    font-size: toRem(16);
+                }
+            }
+        }
+    }
+
+    /***** modal *****/
+    .modal-layout {
+        .modal-wrap {
+            min-width: auto;
+            border-radius: 0;
+
+            &.full {
+                width: 100%;
+                height: 100%;
+
+                .modal-footer {
+                    position: fixed;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+
+            &.top {
+                height: 60%;
+                border-bottom-left-radius: toRem(18);
+                border-bottom-right-radius: toRem(18);
+
+                .modal-body {
+                    max-height: calc(100% - toRem(152));
+                }
+            }
+
+            &.bottom {
+                height: 60%;
+                border-top-left-radius: toRem(18);
+                border-top-right-radius: toRem(18);
+
+                .modal-header {
+                    padding-top: toRem(16);
+                }
+
+                .modal-body {
+                    max-height: calc(100% - toRem(152));
+                }
+
+                .modal-close {
+                    top: toRem(16);
+                }
+            }
+
+            &.system {
+                min-width: auto;
+                width: calc(100% - toRem(48));
+                border-radius: toRem(18);
+            }
+
+            .modal-header {
+                display: flex;
+                align-items: center;
+                height: toRem(56);
+                padding: 0 toRem(24);
+
+                .modal-title {
+                    font-size: toRem(20);
+                }
+            }
+
+            .modal-body {
+                max-height: none;
+            }
+
+            .modal-close {
+                top: toRem(6);
+                right: toRem(6);
+            }
+        }
+    }
+
+    /***** toast *****/
+    .toast-wrap {
+        width: 100%;
+        max-width: calc(100% - toRem(24));
+        font-size: toRem(14);
+    }
+}
+
+@keyframes calendar-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// 280
+@media screen and (max-width: 280px) {
+}
+
+// 360
+@media screen and (max-width: 360px) {
+}
+
+// 375
+@media screen and (max-width: 375px) {
+}
