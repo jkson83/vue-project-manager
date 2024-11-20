@@ -1,46 +1,45 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
-import GUIDE from './guide/guide.js';
-
-const routes = [
-    {
-        path: '/',
-        redirect: '/guide/modal'
-    },
-    {
-        path: '/',
-        component: () => import('@/components/layout/LayoutBasic.vue'),
-        children: [
-            {
-                path: '/home',
-                name: 'home',
-                component: () => import('@/views/main/MainPage.vue')
-            }
-        ]
-    },
-    {
-        path: '/error',
-        name: 'error',
-        component: () => import('@/views/ErrorPage.vue')
-    },
-    {
-        path: '/notFound',
-        name: 'notFound',
-        component: () => import('@/views/NotFound.vue')
-    },
-    {
-        path: '/:pathMatch(.*)*',
-        redirect: '/notFound'
-    },
-    ...GUIDE
-];
+import { createRouter, createWebHistory } from 'vue-router';
+import BoardList from '@/views/BoardList.vue';
+import BoardDetail from '@/views/BoardDetail.vue';
+import BoardCreate from '@/views/BoardCreate.vue';
+import BoardEdit from '@/views/BoardEdit.vue';
+import Calculator from '@/views/Calculator.vue';
+import Calculator2 from '@/views/Calculator2.vue';
 
 const router = createRouter({
-    mode: 'history',
-    history: createWebHashHistory(import.meta.env.BASE_URL),
-    routes,
-    scrollBehavior() {
-        return { top: 0 };
-    }
+	history: createWebHistory(import.meta.env.BASE_URL),
+	routes: [
+		{
+			path: '/BoardList',
+			name: 'BoardList',
+			component: BoardList,
+		},
+		{
+			path: '/BoardDetail/:id',
+			name: 'BoardDetail',
+			component: BoardDetail,
+		},
+		{
+			path: '/edit/:id',
+			name: 'BoardEdit',
+			component: BoardEdit,
+		},
+		{
+			path: '/BoardCreate',
+			name: 'BoardCreate',
+			component: BoardCreate,
+		},
+		{
+			path: '/Calculator',
+			name: 'Calculator',
+			component: Calculator,
+		},
+		{
+			path: '/Calculator2',
+			name: 'Calculator2',
+			component: Calculator2,
+		},
+	],
 });
 
 export default router;
