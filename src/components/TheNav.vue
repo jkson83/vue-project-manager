@@ -1,7 +1,9 @@
 <template>
 	<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Home</a>
+			<!-- <RouterLink to="/BoardList" class="category" @click="toggleView('B')"
+				>Home</RouterLink
+			> -->
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -28,7 +30,7 @@
 							to="/Calculator"
 							class="category"
 							@click="toggleView('e')"
-							>ect</RouterLink
+							>계산기(Vue2)</RouterLink
 						>
 					</li>
 					<li class="nav-item">
@@ -36,7 +38,7 @@
 							to="/Calculator2"
 							class="category"
 							@click="toggleView('e')"
-							>ect1</RouterLink
+							>계산기(Vue3)</RouterLink
 						>
 					</li>
 				</ul>

@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<h3>리스트형식</h3>
 		<table class="table">
 			<thead>
 				<tr>
@@ -41,6 +42,8 @@
 			<button @click="isModalOpen = false">닫기</button>
 		</ModalPage>
 	</div>
+
+	<h3>아코디언 형식</h3>
 	<!-- 아코디언 예시 -->
 	<acocodian></acocodian>
 </template>

@@ -1,5 +1,5 @@
 <template>
-	<div class="accodian-item">
+	<div class="accordion-item">
 		<button @click="$emit('toggle')" class="accordion-header">
 			{{ title }}
 		</button>
@@ -16,5 +16,3 @@ const props = defineProps({
 	isOpen: Boolean,
 });
 </script>
-
-<style lang="scss" scoped></style>

@@ -2,6 +2,10 @@
 body {
   font-family: "Nanum Gothic Coding" !important;
 }
+body h3 {
+  display: inline-block;
+  padding-top: 50px;
+}
 body a {
   display: inline-block;
   text-decoration: none;
@@ -12,8 +16,18 @@ body nav .category {
   font-size: 14px;
   font-weight: 600;
 }
-body table td > a:hover {
-  color: #2e2e68 !important;
+body table {
+  background-color: none;
+}
+body table td:hover {
+  color: #2e2e68;
+}
+body table td a {
+  -webkit-text-decoration: noen;
+          text-decoration: noen;
+}
+body table td a:hover {
+  color: blue;
 }
 body .TagName {
   display: inline-block;
@@ -75,4 +89,36 @@ body button:hover {
 }
 body button:active {
   box-shadow: 0px 0px 0px;
+}
+body .accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border-top: 2px solid #222;
+}
+body .accordion-item, body .accordion-header, body .accordion-content {
+  width: 100%;
+}
+body .accordion-item {
+  position: relative;
+  border: 0;
+  border-bottom: 1px solid #999;
+}
+body .accordion-header {
+  text-align: left;
+  background-color: #fff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+body .accordion-header:hover {
+  background-color: #f8f8f8;
+}
+body .viewCont {
+  width: 100%;
+  height: 64px;
+  padding: 20px;
+  margin: 0;
+  position: relative;
 }/*# sourceMappingURL=base.css.map */
