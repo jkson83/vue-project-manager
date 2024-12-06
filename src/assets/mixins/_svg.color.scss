@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+//=======================================================
+// Mixins: svg_color
+//=======================================================
+
+@mixin svg_color($svg, $new_color:#222, $find_color :'%23xxx'){
+	$svg : svg_color($svg, $new_color, $find_color);
+	background-image:url($svg); 
+}
