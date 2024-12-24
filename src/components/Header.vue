@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="header">
 		<TheNav @viewDepth="emitdata"></TheNav>
 		<nav v-if="viewType === 'B'">
 			<RouterLink to="/BoardList" class="category">리스트</RouterLink>
