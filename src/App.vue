@@ -1,6 +1,6 @@
 <template>
 	<div class="wrap">
-		<Header>git test222333</Header>
+		<Header></Header>
 		<RouterView />
 	</div>
 </template>

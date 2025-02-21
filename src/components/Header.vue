@@ -2,8 +2,8 @@
 	<div class="header">
 		<TheNav @viewDepth="emitdata"></TheNav>
 		<nav v-if="viewType === 'B'">
-			<RouterLink to="/BoardList" class="category">리스트</RouterLink>
-			<RouterLink to="/BoardCreate" class="category">작성하기</RouterLink>
+			<RouterLink to="/BoardList" class="category">리스트aaaaa</RouterLink>
+			<RouterLink to="/BoardCreate" class="category">작성하기aaaa</RouterLink>
 		</nav>
 	</div>
 </template>
