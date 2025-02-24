@@ -1,51 +1,41 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
-import rootPage from '@/views/BoardList.vue';
-import BoardList from '@/views/BoardList.vue';
-import BoardDetail from '@/views/BoardDetail.vue';
-import BoardCreate from '@/views/BoardCreate.vue';
-import BoardEdit from '@/views/BoardEdit.vue';
-import Calculator from '@/views/Calculator.vue';
-import Calculator2 from '@/views/Calculator2.vue';
+import { createRouter, createWebHistory } from 'vue-router';
+
+const Home = () => '@/views/BoardList.vue';
+const BoardPage = () => '@/views/BoardList.vue';
+const WorkPage = () => '@/views/Calculator.vue';
+
+const routes = [
+	{
+		path: '/',
+		name: 'Home',
+		component: Home, // 정적 가져오기 사용
+	},
+	{
+		path: '/views',
+		name: 'BoardPage',
+		componet: BoardPage,
+		children: [
+			{ path: 'BoardDetail', name: 'BoardDetail', component: BoardPage },
+			{ path: 'BoardCreate', name: 'BoardCreate', component: BoardPage },
+			{ path: 'BoardEdit', name: 'BoardDetail', component: boardstyle },
+		],
+	},
+	{
+		path: '/views',
+		name: 'WorkPage',
+		componet: WorkPage,
+		children: [
+			{ path: 'Calculator', name: 'Calculator', component: WorkPage },
+			{ path: 'Calculator2', name: 'Calculator2', component: WorkPage },
+			{ path: 'Calendal', name: 'Calendal', component: WorkPage },
+		],
+	},
+	// 동적 가져오기 사용
+];
 
 const router = createRouter({
-	history: createWebHashHistory(import.meta.env.BASE_URL),
-	routes: [
-		{
-			path: '/',
-			name: 'rootPage',
-			component: rootPage,
-		},
-		{
-			path: '/BoardList',
-			name: 'BoardList',
-			component: BoardList,
-		},
-		{
-			path: '/BoardDetail/:id',
-			name: 'BoardDetail',
-			component: BoardDetail,
-		},
-		{
-			path: '/edit/:id',
-			name: 'BoardEdit',
-			component: BoardEdit,
-		},
-		{
-			path: '/BoardCreate',
-			name: 'BoardCreate',
-			component: BoardCreate,
-		},
-		{
-			path: '/Calculator',
-			name: 'Calculator',
-			component: Calculator,
-		},
-		{
-			path: '/Calculator2',
-			name: 'Calculator2',
-			component: Calculator2,
-		},
-	],
+	history: createWebHistory(),
+	routes,
 });
 
 export default router;
