@@ -1,20 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Nanum Gothic Coding" !important;
+  font-size: 16px !important;
+}
+body ul,
+body li,
+body nav,
+body div {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body h3 {
   display: inline-block;
-  padding-top: 50px;
 }
 body a {
   display: inline-block;
   text-decoration: none;
   color: #333;
-}
-body nav .category {
-  margin: 0 5px;
-  font-size: 14px;
-  font-weight: 600;
 }
 body table {
   background-color: none;

@@ -42,17 +42,12 @@
 			<button @click="isModalOpen = false">닫기</button>
 		</ModalPage>
 	</div>
-
-	<h3>아코디언 형식</h3>
-	<!-- 아코디언 예시 -->
-	<acocodian></acocodian>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import { usePostStore } from '@/store'; //Pinia 스토어 가져오기
 import ModalPage from '@/components/ModalPage.vue';
-import Acocodian from '@/components/Acocodian.vue';
 
 const postStore = usePostStore(); //스토어 인스턴스 가져오기
 const posts = postStore.posts; //스토의 posts 가져오기

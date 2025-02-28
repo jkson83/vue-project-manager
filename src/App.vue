@@ -1,11 +1,15 @@
 <template>
-	<div id="app">
-		<nav>
-			<router-link to="/">Home</router-link> |
-			<router-link to="/BoardPage">BoardPage</router-link>
-			<router-link to="/WorkPage">WorkPage</router-link>
-		</nav>
+	<TopNavi />
+	<div class="container">
 		<router-view />
-		<!-- 최상위 라우트 출력 -->
 	</div>
+	<!-- 컴포넌트 태그를 꼭 닫아주세요 -->
 </template>
+
+<script>
+import TopNavi from '@/components/TopNavi.vue';
+
+export default {
+	components: { TopNavi }, // components에 등록 필요
+};
+</script>
