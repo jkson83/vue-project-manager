@@ -1,7 +1,13 @@
 <template>
 	<div>
 		<h3>리스트형식</h3>
-		<table class="table">
+		<table class="tableStyle">
+			<colgroup>
+				<col width="10%" />
+				<col width="15%" />
+				<col width="*" />
+				<col width="20%" />
+			</colgroup>
 			<thead>
 				<tr>
 					<th scope="col">번호</th>
@@ -20,7 +26,7 @@
 					</td>
 					<!-- <td @click="openModal(post.title, post.content)"> -->
 					<td>
-						<router-link :to="'/BoardDetail/' + post.id">{{
+						<router-link :to="`detail/${post.id}`">{{
 							post.title
 						}}</router-link>
 					</td>

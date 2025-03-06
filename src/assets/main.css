@@ -1,15 +1,57 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+table {
+  border: 0;
+  border-spacing: 0;
+}
+
+.tableStyle {
+  width: 100%;
+}
+.tableStyle thead {
+  background-color: darkcyan;
+  color: #fff;
+}
+.tableStyle thead th {
+  padding: 1rem 0;
+}
+.tableStyle thead th:first-of-type {
+  border-radius: 8px 0 0 8px;
+}
+.tableStyle thead th:last-of-type {
+  border-radius: 0 8px 8px 0;
+}
+.tableStyle tbody tr:hover {
+  background-color: #fdf5ea;
+}
+.tableStyle tbody td {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Nanum Gothic Coding" !important;
-  font-size: 16px !important;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 body ul,
 body li,
 body nav,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
 body div {
   list-style: none;
   margin: 0;
@@ -18,14 +60,14 @@ body div {
 }
 body h3 {
   display: inline-block;
+  margin: 15px 0;
+  font-size: 3.2rem;
+  font-weight: 600;
 }
 body a {
   display: inline-block;
   text-decoration: none;
   color: #333;
-}
-body table {
-  background-color: none;
 }
 body table td:hover {
   color: #2e2e68;
@@ -156,12 +198,14 @@ body .viewCont {
   width: 100%;
   height: 100%;
 }
-#app nav ul > li a {
+#app nav ul > li > a {
   height: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
   width: inherit;
+  font-size: 2rem;
+  font-weight: 600;
 }
 #app nav ul > li:hover {
   color: #333;
@@ -194,7 +238,10 @@ body .viewCont {
   border-bottom: none;
   margin-bottom: 0;
   padding: 1rem 0;
-  font-size: 1.4rem;
+}
+#app nav ul > li .subMenu > ul > li > a {
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 #app nav ul > li .subMenu.active {
   display: block;
