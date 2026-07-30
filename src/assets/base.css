@@ -1,126 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
 body {
-  font-family: "Nanum Gothic Coding" !important;
-}
-body h3 {
-  display: inline-block;
-  padding-top: 50px;
-}
-body a {
-  display: inline-block;
-  text-decoration: none;
-  color: #333;
-}
-body nav .category {
-  margin: 0 5px;
-  font-size: 14px;
-  font-weight: 600;
-}
-body table {
-  background-color: none;
-}
-body table td:hover {
-  color: #2e2e68;
-}
-body table td a {
-  -webkit-text-decoration: noen;
-          text-decoration: noen;
-}
-body table td a:hover {
-  color: blue;
-}
-body .TagName {
-  display: inline-block;
-  width: 100%;
-  margin: 0 0 5px 0;
-  font-size: 13px;
-}
-body .btn-tab {
-  text-align: right;
-}
-body .b-box {
-  width: 100%;
-  display: inline-flex;
-  justify-content: space-between;
-}
-body .cal_box {
-  position: relative;
-  width: 360px;
-  margin: 20px auto;
-  padding: 15px;
-  border: 1px solid #333;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-body .cal_box .display_v3 {
-  width: 100%;
-  height: 75px;
-  border: 1px solid #2e2e68;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-body .cal_box .display_v3 > p {
-  text-align: right;
-  padding: 3px 10px;
-  font-size: 24px;
+  padding: 0;
   margin: 0;
 }
-body .cal_box .display_v3 .memory-line {
-  font-size: 16px;
-  min-height: 24px;
+@font-face {
+  font-family: "Paperozi";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Medium.woff2") format("woff2");
+  font-weight: 100;
+  font-display: swap;
 }
-body .buttons_v3 {
-  margin-top: 15px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-body button {
-  line-height: 70px;
-  border-radius: 10px;
+body div, body a, body table, body button, body p, body span, body th, body td, body em, body ul, body li, body dl, body dt, body dd, body ol, body strong, body h1, body h2, body h3, body h4, body h5, body h6, body header, body footer, body article, body section {
+  list-style: none;
   box-sizing: border-box;
-  border: 1px solid #333;
-  font-size: 20px;
-  box-shadow: 3px 2px 2px #999;
-}
-body button:hover {
-  background-color: #d8d8d8;
-}
-body button:active {
-  box-shadow: 0px 0px 0px;
-}
-body .accordion {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  border-top: 2px solid #222;
-}
-body .accordion-item, body .accordion-header, body .accordion-content {
-  width: 100%;
-}
-body .accordion-item {
-  position: relative;
-  border: 0;
-  border-bottom: 1px solid #999;
-}
-body .accordion-header {
-  text-align: left;
-  background-color: #fff;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-body .accordion-header:hover {
-  background-color: #f8f8f8;
-}
-body .viewCont {
-  width: 100%;
-  height: 64px;
-  padding: 20px;
+  padding: 0;
   margin: 0;
-  position: relative;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-}/*# sourceMappingURL=base.css.map */
+  font-family: "Paperozi", "Noto Sans KR", sans-serif;
+  font-weight: 400;
+}

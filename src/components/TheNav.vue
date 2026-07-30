@@ -2,7 +2,7 @@
 	<nav>
 		<!-- <RouterLink to="/BoardList" class="category" @click="toggleView('B')"
 			>Home</RouterLink
-		> -->
+		>
 		<button
 			class="navbar-toggler"
 			type="button"
@@ -10,9 +10,9 @@
 			aria-expanded="false"
 			aria-label="Toggle navigation"
 		>
-			<span></span>
-		</button>
-		<div>
+			<span>adsadfafs</span>
+		</button> -->
+		<div class="top-menu">
 			<ul>
 				<li>
 					<RouterLink to="/BoardList" class="category" @click="toggleView('B')"

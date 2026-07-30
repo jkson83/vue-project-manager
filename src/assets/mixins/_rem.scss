@@ -1,9 +1,9 @@
 @charset "utf-8";
-
+@use "sass:math";
 //=======================================================
 // Mixins: rem
 //=======================================================
 
-@function rem($px) {
-	@return #{calc($px / 10)}rem;
+@function to-rem($px) {
+	@return math.div($px, 16) * 1rem;
 }

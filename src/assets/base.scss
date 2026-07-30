@@ -1,131 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
-body{
-  font-family: 'Nanum Gothic Coding' !important;
-  h3{
-    display: inline-block;
-    padding-top:50px;
+body {
+  padding:0;
+  margin:0;
+  @font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Medium.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
   }
-  a{
-      display: inline-block;
-      text-decoration: none;
-      color:#333;
-    }
-  nav{
-    .category{
-      margin:0 5px;
-      font-size: 14px;
-      font-weight: 600;
-    }    
-  }
-  table{
-    background-color: none;
-    td{
-      &:hover{
-        color:#2e2e68;
-      }
-      & a{
-        text-decoration: noen;
-        &:hover{
-          color:blue;
-        }
-      }
-    }
-  }  
-  .TagName{
-    display: inline-block;
-    width:100%;
-    margin:0 0 5px 0;
-    font-size: 13px;
-  }
-  .btn-tab{
-    text-align: right;
-  }
-  .b-box{
-    width:100%;
-    display: inline-flex;
-    justify-content: space-between;
-  }  
-  .cal_box{
-    position: relative;
-    width:360px;
-    margin:20px auto;
-    padding:15px;
-    border:1px solid #333;
-    border-radius: 10px;
+  div, a, table, button, p, span, th, td, em, ul, li, dl, dt, dd, ol, strong, h1, h2, h3, h4, h5, h6, header, footer, article, section{
+    list-style: none;
     box-sizing: border-box;
-
-    .display_v3{
-      width:100%;
-      height:75px;   
-      border:1px solid #2e2e68;
-      box-sizing:border-box;
-      border-radius: 5px;
-      >p{
-        text-align: right;
-        padding:3px 10px;
-        font-size:24px;
-        margin:0;
-        }
-        .memory-line{
-          font-size:16px;
-          min-height:24px;
-        }        
-
-      }
-  }
-  .buttons_v3{
-      margin-top:15px;
-      width:100%;
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:10px;
-  }
-  button{
-      line-height: 70px;
-      border-radius: 10px;
-      box-sizing: border-box;
-      border:1px solid #333;
-      font-size: 20px;
-      box-shadow: 3px 2px 2px #999;
-      &:hover{
-        background-color: #d8d8d8;
-      }
-      &:active{
-        box-shadow: 0px 0px 0px;
-      }
-  }
-  .accordion{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width:100%;
-    border-top:2px solid #222;
-    &-item, &-header, &-content{
-      width:100%;
-    }
-    &-item{
-      position: relative;
-      border:0;
-      border-bottom:1px solid #999;
-    }
-    &-header{
-      text-align:left;
-      background-color: #fff;
-      border:0;
-      border-radius: 0;
-      box-shadow: none;
-      &:hover{
-        background-color: #f8f8f8;
-      }
-    }
-  }
-  .viewCont{      
-    width: 100%;
-    height: 64px;
-    padding:20px;
+    padding:0;
     margin:0;
-    position: relative;
-    background-color: #f0f0f0;
-    border-radius:8px;
+    font-family: 'Paperozi', "Noto Sans KR", sans-serif;
+    font-weight: 400;
   }
 }  
