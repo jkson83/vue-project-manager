@@ -1,7 +1,7 @@
 <template>
 	<section>
-		<h3>리스트형식</h3>
-		<table class="table">
+		<h2>리스트형식</h2>
+		<table class="table-wrap">
 			<thead>
 				<tr>
 					<th scope="col">번호</th>
@@ -24,7 +24,6 @@
 							post.title
 						}}</router-link>
 					</td>
-
 					<td>
 						{{ post.date }}
 					</td>
@@ -44,7 +43,7 @@
 	</section>
 
 	<section>
-		<h3>아코디언 형식</h3>
+		<h2>아코디언 형식</h2>
 		<!-- 아코디언 예시 -->
 		<acocodian></acocodian>
 	</section>

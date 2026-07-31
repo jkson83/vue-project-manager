@@ -7,6 +7,7 @@
   height:100%;
   .wrap > *{
     width:100%;
+    height: 100%;
     padding:0 fn.to-rem(120);
   }
   .header{
@@ -21,5 +22,52 @@
   }
   section{
     margin-top:fn.to-rem(30);
+    &+ section {
+        margin-top: fn.to-rem(30);
+      }
+  }
+  
+
+  @for $i from 1 through 6{
+    h#{$i}{
+    padding: fn.to-rem(15) 0;
+    font-weight: 700;
+    font-size: fn.to-rem(32);
+    &+* {
+        margin-top: fn.to-rem(20);
+      }
+    }
+  }
+
+  .table-wrap{
+    width:100%;
+    border-bottom: 1px solid #d7d7d7;
+    th{
+      border-top:1px solid #d7d7d7;
+      border-bottom: 1px solid #d7d7d7;
+    }
+    th, td{
+      padding:fn.to-rem(16) 0;
+      text-align: center;
+    }
+  }
+  .accordion{
+    &-item {
+      width:100%;
+      padding: fn.to-rem(15);
+      background-color: #f3eded;
+      border-radius: fn.to-rem(12);
+      &+ div{
+        margin-top:fn.to-rem(12);
+      }
+    }
+    &-header{
+      width:100%;
+      border:0;
+      font-size:fn.to-rem(24);
+      font-weight:500;
+      text-align: left;
+      background-color: inherit;
+    }
   }
 }
