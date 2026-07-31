@@ -41,21 +41,22 @@
 
   .table-wrap{
     width:100%;
-    border-bottom: 1px solid #d7d7d7;
-    th{
-      border-top:1px solid #d7d7d7;
-      border-bottom: 1px solid #d7d7d7;
+    border-top:2px solid #1a1a1a;
+    thead{
+      box-shadow: 0 4px 8px -4px #1A1A1A29;
     }
     th, td{
       padding:fn.to-rem(16) 0;
       text-align: center;
+      border-bottom: 1px solid #d7d7d7;
     }
   }
   .accordion{
+    border-top: 2px solid #1a1a1a;
     &-item {
+      border-top: 1px solid #d7d7d7;
       width:100%;
       padding: fn.to-rem(15);
-      background-color: #f3eded;
       border-radius: fn.to-rem(12);
       &+ div{
         margin-top:fn.to-rem(12);

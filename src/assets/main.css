@@ -96,20 +96,23 @@ body div, body a, body table, body button, body p, body span, body th, body td, 
 }
 .wrapper .table-wrap {
   width: 100%;
-  border-bottom: 1px solid #d7d7d7;
+  border-top: 2px solid #1a1a1a;
 }
-.wrapper .table-wrap th {
-  border-top: 1px solid #d7d7d7;
-  border-bottom: 1px solid #d7d7d7;
+.wrapper .table-wrap thead {
+  box-shadow: 0 4px 8px -4px rgba(26, 26, 26, 0.1607843137);
 }
 .wrapper .table-wrap th, .wrapper .table-wrap td {
   padding: 1rem 0;
   text-align: center;
+  border-bottom: 1px solid #d7d7d7;
+}
+.wrapper .accordion {
+  border-top: 2px solid #1a1a1a;
 }
 .wrapper .accordion-item {
+  border-top: 1px solid #d7d7d7;
   width: 100%;
   padding: 0.9375rem;
-  background-color: #f3eded;
   border-radius: 0.75rem;
 }
 .wrapper .accordion-item + div {
