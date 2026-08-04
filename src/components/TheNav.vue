@@ -15,6 +15,9 @@
 		<div class="top-menu">
 			<ul>
 				<li>
+					<RouterLink to="/Componets/Bedge" class="category">Bedge</RouterLink>
+				</li>
+				<li>
 					<RouterLink to="/BoardList" class="category" @click="toggleView('B')"
 						>Board</RouterLink
 					>

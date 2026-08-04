@@ -6,6 +6,7 @@ import BoardCreate from '@/views/BoardCreate.vue';
 import BoardEdit from '@/views/BoardEdit.vue';
 import Calculator from '@/views/Calculator.vue';
 import Calculator2 from '@/views/Calculator2.vue';
+import Bedge from '@/views/componets/bedge.vue';
 
 const router = createRouter({
 	history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
 			path: '/Calculator2',
 			name: 'Calculator2',
 			component: Calculator2,
+		},
+		{
+			path: '/componets/bedge',
+			name: 'Bedge',
+			component: Bedge,
 		},
 	],
 });
